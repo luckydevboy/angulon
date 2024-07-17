@@ -1,31 +1,40 @@
-import {Component, Input} from '@angular/core';
-import {NgClass, NgIf, NgTemplateOutlet} from "@angular/common";
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { NgClass, NgIf, NgTemplateOutlet } from '@angular/common';
+import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'ang-button',
   standalone: true,
-  imports: [
-    NgClass,
-    NgIf,
-    NgTemplateOutlet
-  ],
+  imports: [NgClass, NgIf, NgTemplateOutlet],
   templateUrl: './button.component.html',
-  styleUrl: '../../output.css'
+  styleUrl: '../../output.css',
 })
-export class ButtonComponent {
+export class ButtonComponent implements OnInit {
   @Input() isLoading: boolean = false;
   @Input() variant: 'primary' | 'secondary' | 'soft' = 'primary';
   @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'lg';
   @Input() rounded: boolean = false;
   @Input() circular: boolean = false;
-  @Input() icon?: any;
+  @Input() icon?: string;
   @Input() iconPosition: 'start' | 'end' = 'start';
 
+  sanitizedIcon?: SafeHtml;
+
+  sanitizer = inject(DomSanitizer);
+
+  ngOnInit() {
+    if (this.icon) {
+      this.sanitizedIcon = this.sanitizer.bypassSecurityTrustHtml(this.icon);
+    }
+  }
+
   get classes(): string {
-    const baseClasses = 'flex items-center justify-center gap-x-2 relative outline-none transition-colors';
+    const baseClasses =
+      'flex items-center justify-center gap-x-2 relative outline-none transition-colors';
     const variantClasses = {
       primary: 'bg-primary hover:bg-primary-hover text-white',
-      secondary: 'bg-secondary text-secondary-text border border-secondary-border hover:bg-secondary-hover',
+      secondary:
+        'bg-secondary text-secondary-text border border-secondary-border hover:bg-secondary-hover',
       soft: 'bg-soft text-soft-text hover:bg-soft-hover',
     };
     const sizeClasses = {
