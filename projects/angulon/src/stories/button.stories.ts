@@ -23,7 +23,7 @@ const meta: Meta<ButtonComponent> = {
   },
   render: (args) => ({
     props: args,
-    template: `<ang-button ${argsToTemplate(args)}>Click me</ang-button>`,
+    template: `<ang-button ${argsToTemplate(args)}>Click Here...</ang-button>`,
   }),
 };
 
@@ -46,7 +46,7 @@ export const Soft: Story = {
 
 export const WithIcon: Story = {
   args: {
-    iconPosition: "end",
+    iconPosition: 'end',
 
     icon: `
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -55,6 +55,6 @@ export const WithIcon: Story = {
 
     `,
 
-    variant: "soft"
+    variant: 'soft',
   },
 };

@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "tailwind": "npx tailwindcss -i ./projects/angulon/src/input.css -o ./projects/angulon/src/output.css --watch",
     "storybook": "ng run angulon:storybook",
-    "build-storybook": "ng run angulon:build-storybook"
+    "build-storybook": "ng run angulon:build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_8d0a3a4e7384aa4"
   },
   "dependencies": {
     "@angular/animations": "^18.0.0",
@@ -41,6 +42,7 @@
     "@storybook/test": "^8.2.4",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "18.1.0",
+    "chromatic": "^11.5.5",
     "eslint": "^9.6.0",
     "eslint-plugin-storybook": "^0.8.0",
     "jasmine-core": "~5.1.0",
