@@ -36,9 +36,12 @@ module.exports = {
           closeIcon: "#737373", // zinc-500
           border: "#E4E4E7", // zinc-200
         },
+        dropdown: {
+          border: "#E4E4E7",
+          hover: "#dbeafe",
+        },
       },
     },
   },
   plugins: [],
-}
-
+};
