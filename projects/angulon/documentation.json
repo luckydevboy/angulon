@@ -18,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{}"
+                "defaultValue": "{\n  args: {\n    options: [\n      { label: 'Item 1', value: 1 },\n      { label: 'Item 2', value: 2 },\n      { label: 'Item 3', value: 3 },\n      { label: 'Item 4', value: 4 },\n    ],\n  },\n}"
             },
             {
                 "name": "meta",
@@ -127,7 +127,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{}"
+                    "defaultValue": "{\n  args: {\n    options: [\n      { label: 'Item 1', value: 1 },\n      { label: 'Item 2', value: 2 },\n      { label: 'Item 3', value: 3 },\n      { label: 'Item 4', value: 4 },\n    ],\n  },\n}"
                 },
                 {
                     "name": "meta",

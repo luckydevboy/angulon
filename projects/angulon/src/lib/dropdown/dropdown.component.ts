@@ -12,7 +12,7 @@ type Option = {
   standalone: true,
   imports: [NgClass, OutsideClickDirective],
   templateUrl: './dropdown.component.html',
-  styleUrl: '../../output.css',
+  styleUrl: '../../styles.css',
 })
 export class DropdownComponent {
   @Input() options: Option[] = [];

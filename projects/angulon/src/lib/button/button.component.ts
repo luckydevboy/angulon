@@ -7,7 +7,7 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
   standalone: true,
   imports: [NgClass, NgIf, NgTemplateOutlet],
   templateUrl: './button.component.html',
-  styleUrl: '../../output.css',
+  styleUrl: '../../styles.css',
 })
 export class ButtonComponent implements OnInit {
   @Input() isLoading: boolean = false;
