@@ -1,0 +1,40 @@
+<div
+  class="relative border border-dropdown-border bg-white h-9 w-full flex items-center justify-between px-4 rounded-md cursor-pointer"
+  (click)="isOpen = !isOpen"
+  (angOutsideClick)="isOpen = false"
+>
+  @if (selected) {
+    <div class="text-sm">{{ selected.label }}</div>
+  } @else {
+    <div class="text-sm">{{ placeholder }}</div>
+  }
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="size-4"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+    />
+  </svg>
+
+  @if (isOpen) {
+    <div
+      class="bg-white rounded-md absolute top-11 w-full left-0 border border-dropdown-border max-h-52 overflow-y-auto"
+    >
+      @for (option of options; track option.value; let i = $index) {
+        <div
+          class="px-4 py-2 hover:bg-dropdown-hover text-sm"
+          (click)="handleSelect(option)"
+        >
+          {{ option.label }}
+        </div>
+      }
+    </div>
+  }
+</div>

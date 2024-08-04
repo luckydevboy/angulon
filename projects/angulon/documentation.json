@@ -11,6 +11,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    options: [\n      { label: 'Item 1', value: 1 },\n      { label: 'Item 2', value: 2 },\n      { label: 'Item 3', value: 3 },\n      { label: 'Item 4', value: 4 },\n    ],\n  },\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -19,6 +29,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
                 "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    size: {\n      options: ['xs', 'sm', 'md', 'lg', 'xl'],\n      control: { type: 'select' },\n    },\n    variant: {\n      options: ['primary', 'secondary', 'soft'],\n      control: { type: 'select' },\n    },\n    iconPosition: {\n      control: { type: 'select' },\n      options: ['start', 'end'],\n    },\n  },\n  render: (args) => ({\n    props: args,\n    template: `<ang-button ${argsToTemplate(args)}>Click Here...</ang-button>`,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DropdownComponent>",
+                "defaultValue": "{\n  title: 'Dropdown',\n  component: DropdownComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  render: (args) => ({\n    props: args,\n    template: `<ang-dropdown ${argsToTemplate(args)}></ang-dropdown>`,\n  }),\n}"
             },
             {
                 "name": "preview",
@@ -83,10 +103,43 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DropdownComponent>",
+                "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/angulon/src/stories/dropdown.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    options: [\n      { label: 'Item 1', value: 1 },\n      { label: 'Item 2', value: 2 },\n      { label: 'Item 3', value: 3 },\n      { label: 'Item 4', value: 4 },\n    ],\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DropdownComponent>",
+                    "defaultValue": "{\n  title: 'Dropdown',\n  component: DropdownComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  render: (args) => ({\n    props: args,\n    template: `<ang-dropdown ${argsToTemplate(args)}></ang-dropdown>`,\n  }),\n}"
+                }
+            ],
             "projects/angulon/src/stories/button.stories.ts": [
                 {
                     "name": "meta",
@@ -167,6 +220,19 @@
                     "description": "",
                     "kind": 183
                 }
+            ],
+            "projects/angulon/src/stories/dropdown.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DropdownComponent>",
+                    "file": "projects/angulon/src/stories/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
@@ -231,6 +297,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "WithIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angulon/src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angulon/src/stories/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
